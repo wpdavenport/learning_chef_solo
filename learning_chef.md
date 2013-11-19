@@ -8,12 +8,18 @@ This inspired me to modify it using Vagrant and create a basic "Hello World" exa
 
 ## 10,000 Feet View
 
-Think of Chef as having 4 components:
+### Think of Chef as having 3 components:
 
-1. A gem [`chef`](http://rubygems.org/gems/chef) - For our purposes chef-solo is built into vagrant.
-2. Create a basic structure with one or more cookbooksthat looks like this:
+- <strong>Chef server</strong> Here you store all your configurations for all of your nodes and roles. The chef server distributes cookbooks to the nodes.
+- <strong>Chef clients (Nodes)</strong> Every client will be registered as a node at the chef server. Each node will receive its cookbooks from the chef server.
+- <strong>Your workstation</strong> You will control each node using chefs command line tool knife.
+
+### Chef-solo - a breakdown
+
+1. For our purposes, chef-solo is built into vagrant. There is no separate gem or library you need to install.
+2. Create a basic structure with one or more cookbooks that looks like this:
     ```
     ~/vagrant/cookbooks/NAME_OF_PACKAGE/
     ```
-3. Roles - Which can take multiple cookbooks (even specific roles within that cookbook) for installing software packages
-4. Overrides or Attribures: It doesn't take long before you'll be confronted with creating or overwriting attributes using JSON or specifing attributes in a Ruby file. Say you want to create a default user for your database or overwrite default configurations for PostgreSQL. There are also ways to make configurations based on OS. 
+3. Roles - Which can take multiple cookbooks (even specific roles within a cookbook) for installing software packages
+4. Overrides or Attribures: It doesn't take long before you'll be confronted with creating or overwriting attributes using JSON or specifing attributes in a Ruby file. Say you want to create a default user for your database or overwrite default configurations for PostgreSQL. There are also ways to make or overwrite configurations based on OS. Configuration creation is apart of Chef and Chef-solo.
