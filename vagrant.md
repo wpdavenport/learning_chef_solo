@@ -1,8 +1,6 @@
 #Install Vagrant
 
-This is the most basic example or the "Hello World" for learning Chef. In my initial, learning of Chef I found it rather difficult ...
-
-Simple example using chef-solo and vagrant:
+To start out you'll need to install both Vagrant and Virtual Box. Once you are done you'll be all set to start configuring chef-solo.
 
 1. Vagrant/VirtualBox:
     - Setting up Vagrant 
