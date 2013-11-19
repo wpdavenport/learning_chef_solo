@@ -23,6 +23,7 @@ Next we'll setup a some folders and we'll download a cookbook. Chef doesn't crea
 
 - Lets install PostgreSQL to our VM using a cookbook.
 ```
+cd cookbooks
 git clone https://github.com/opscode-cookbooks/ntp.git
 ```
 
@@ -30,6 +31,13 @@ git clone https://github.com/opscode-cookbooks/ntp.git
 When you do `vagrant up` and chef-solo is enabled in the Vagrantfile, the specified folders within the `config :chef_solo` block will become a shared folder. If there are any changes within that folder you will need to reload. To do that run:
 ```
 vagrant reload
+```
+You should see the following output that lets you know that the chef-solo folers are now shared.
+```
+...
+[default] Mounting shared folders...
+[default] -- /vagrant
+[default] -- /tmp/vagrant-chef-1/chef-solo-1/cookbooks
 ```
 
 ### Finding a Role Name Within a Recipe
@@ -47,4 +55,19 @@ Let's enable and setup our config and finally get to running chef-solo. Update t
     chef.cookbooks_path = "cookbooks"
     chef.add_role "ntp"
   end
+```
+
+For Chef-solo Vagrant offers a special command called `provision`. This runs chef-solo for us. If we run this command now we'll get the following error:
+```
+$ vagrant provision
+[default] Running provisioner: chef_solo...
+Shared folders that Chef requires are missing on the virtual machine.
+This is usually due to configuration changing after already booting the
+machine. The fix is to run a `vagrant reload` so that the proper shared
+folders will be prepared and mounted on the VM.
+```
+To fix this we'll `reload` then `provision`.
+```
+vagrant reload
+vagrant provision
 ```
