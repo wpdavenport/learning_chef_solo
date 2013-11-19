@@ -1,6 +1,7 @@
 {
   "title": "Learning Chef-solo",
   "pages": {
+    "Learning Chef": "learning_chef.md",
     "Vagrant": "vagrant.md",
     "Cookbooks with Chef-solo": "cookbooks.md"
   }
