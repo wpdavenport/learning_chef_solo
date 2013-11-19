@@ -3,6 +3,8 @@
   "pages": {
     "Learning Chef": "learning_chef.md",
     "Vagrant": "vagrant.md",
-    "Cookbooks with Chef-solo": "cookbooks.md"
+    "Cookbooks with Chef-solo": "cookbooks.md",
+    "Using Roles with Chef-solo": "roles.md"
+    
   }
 }
