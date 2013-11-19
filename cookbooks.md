@@ -23,7 +23,7 @@ Next we'll setup a some folders and we'll download a cookbook. Chef doesn't crea
 
 - Lets install PostgreSQL to our VM using a cookbook.
 ```
-git clone https://github.com/opscode-cookbooks/postgresql.git
+git clone https://github.com/opscode-cookbooks/ntp.git
 ```
 
 ### Vagrant VM and Chef-solo
@@ -45,6 +45,6 @@ Let's enable and setup our config and finally get to running chef-solo. Update t
 ```
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
-    chef.add_role "postgresql"
+    chef.add_role "ntp"
   end
 ```
