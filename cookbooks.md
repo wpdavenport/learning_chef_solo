@@ -33,7 +33,7 @@ vagrant reload
 ```
 
 ### Finding a Role Name Within a Recipe
-Within the posstgresql folder you will find a file called metedata.rb. Once you open the file at the very top you'll see `name`. This is the name of the role for this cookbook. We will use this in our config when specifying a role.
+Within the ntp folder you will find a file called metedata.rb. Once you open the file at the very top you'll see `name`. This is the name of the role for this cookbook. We will use this in our config when specifying a role.
 
 ### Roles
 "A role is a way to define certain patterns and processes that exist across nodes in an organization as belonging to a single job function" ~ chef site.
