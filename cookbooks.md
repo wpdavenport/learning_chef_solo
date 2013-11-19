@@ -17,8 +17,7 @@ Next we'll setup a some folders and we'll download a cookbook. Chef doesn't crea
 ```
 - vagrant
   |- Vagrantfile
-  \_ cookbooks
-
+  |-- cookbooks
 ```
 
 - Lets install PostgreSQL to our VM using a cookbook.
