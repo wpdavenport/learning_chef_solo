@@ -7,5 +7,13 @@ This process can be a lot of trial and error. Some cookbooks have requirements o
 ## Installing via Role
     
 Let's start off by updating our current configuration to use a role. Then we can begin to add other roles.
+```
+config.vm.provision :chef_solo do |chef|
+  chef.cookbooks_path = "cookbooks"
+  chef.roles_path = "roles"
+  chef.add_role "my_server_setup"
+end
+
+```
 
 ## 
