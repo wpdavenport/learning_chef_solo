@@ -4,7 +4,8 @@ Using roles will help us to build out more complex configurations. Before, we on
 
 This process can be a lot of trial and error. Some cookbooks have requirements or dependencies. Initially, we don't really know how to know what they are. So we'll let provisioning give us some insight on what is missing and fix it as we go along.
 
-## Get More Cookbooks
+## Installing via Role
     
+Let's start off by updating our current configuration to use a role. Then we can begin to add other roles.
 
 ## 
