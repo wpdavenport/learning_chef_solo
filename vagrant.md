@@ -1,4 +1,4 @@
-#Install Vagrant
+##Install Vagrant
 
 Simple example using chef-solo and vagrant:
 
