@@ -14,7 +14,7 @@ This inspired me to modify it using Vagrant and create a basic "Hello World" exa
 - *Chef clients (Nodes)* Every client will be registered as a node at the chef server. Each node will receive its cookbooks from the chef server.
 - *Your workstation* You will control each node using chefs command line tool knife.
 
-### Chef-solo: a breakdown
+### Chef-solo: A breakdown
 
 1. For our purposes, chef-solo is built into vagrant. There is no separate gem or library you need to install.
 2. Create a basic structure with one or more cookbooks that looks like this:
