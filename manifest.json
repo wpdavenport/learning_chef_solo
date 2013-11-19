@@ -5,6 +5,5 @@
     "Vagrant": "vagrant.md",
     "Cookbooks with Chef-solo": "cookbooks.md",
     "Using Roles with Chef-solo": "roles.md"
-    
   }
 }
