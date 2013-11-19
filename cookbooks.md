@@ -53,7 +53,7 @@ Let's enable and setup our config and finally get to running chef-solo. Update t
 ```
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
-    chef.add_role "ntp"
+    chef.add_recipe "ntp"
   end
 ```
 
