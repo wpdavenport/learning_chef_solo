@@ -71,3 +71,5 @@ To fix this we'll `reload` then `provision`.
 vagrant reload
 vagrant provision
 ```
+
+You've completed your first running of chef-solo. Now onto utilizing roles.
