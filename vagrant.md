@@ -1,5 +1,7 @@
 #Install Vagrant
 
+This is the most basic example or the "Hello World" for learning Chef. In my initial, learning of Chef I found it rather difficult ...
+
 Simple example using chef-solo and vagrant:
 
 1. Vagrant/VirtualBox:
