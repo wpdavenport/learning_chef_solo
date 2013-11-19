@@ -72,4 +72,4 @@ vagrant reload
 vagrant provision
 ```
 
-You've completed your first running of chef-solo. Now onto utilizing roles.
+You've completed your first running of chef-solo. Next, we'll look into utilizing roles and begin to see that roles are a generic way to specify what packages (aka cookbooks) we want to intstall. We'll also look at setting configuration attributes and overrides. 
