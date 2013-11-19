@@ -25,3 +25,26 @@ Next we'll setup a some folders and we'll download a cookbook. Chef doesn't crea
 ```
 git clone https://github.com/opscode-cookbooks/postgresql.git
 ```
+
+### Vagrant VM and Chef-solo
+When you do `vagrant up` and chef-solo is enabled in the Vagrantfile, the specified folders within the `config :chef_solo` block will become a shared folder. If there are any changes within that folder you will need to reload. To do that run:
+```
+vagrant reload
+```
+
+### Finding a Role Name Within a Recipe
+Within the posstgresql folder you will find a file called metedata.rb. Once you open the file at the very top you'll see `name`. This is the name of the role for this cookbook. We will use this in our config when specifying a role.
+
+### Roles
+"A role is a way to define certain patterns and processes that exist across nodes in an organization as belonging to a single job function" ~ chef site.
+
+I see a role is a way to specify a job. We are starting out by directly calling a role name within a recipe. Later we'll create a role file that will do more than one thing. 
+
+### Config Chef-solo / Update Vagrant and Run Chef-solo
+Let's enable and setup our config and finally get to running chef-solo. Update the config block to the following:
+```
+  config.vm.provision :chef_solo do |chef|
+    chef.cookbooks_path = "cookbooks"
+    chef.add_role "postgresql"
+  end
+```
